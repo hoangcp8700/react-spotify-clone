@@ -1,6 +1,7 @@
 # Getting Started with Spotify Clone    
-### npm install + npm start
+npm install + npm start
 
+## link: https://dam-spotify.netlify.app
 # Yêu cầu đăng nhập
 
 TK và MK demo:
