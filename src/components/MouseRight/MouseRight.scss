@@ -1,0 +1,46 @@
+@import '../../color.module.scss';
+.mouseRight {
+    width: 100%!important;
+    max-width: 300px!important;
+    background-color: $footerBackground!important;
+    .contextmenu__item {
+        display: flex;
+        color: #fff!important;
+        align-items: center;
+        svg {
+            margin-right: .5rem;
+        }
+        &:hover {
+            background-color: $box-black-hover!important;
+        }
+    }
+    .submenu {
+        &:hover {
+            .contextmenu__item {
+                background-color: $box-black-hover!important;
+            }
+        }
+        .contextmenu__item:after {
+            border-color: transparent transparent transparent #fff!important;
+        }
+        .submenu__item {
+            background-color: $footerBackground!important;
+            .contextmenu__item {
+                &:hover {
+                    background-color: $footerBackground!important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:545px) {
+    .mouseRight {
+        .contextmenu__item {
+            font-size: 12px;
+            svg {
+                font-size: 16px;
+            }
+        }
+    }
+}

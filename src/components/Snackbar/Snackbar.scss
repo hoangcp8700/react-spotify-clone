@@ -1,0 +1,11 @@
+@media (min-width:545px) {
+    .MuiSnackbar-anchorOriginBottomCenter {
+        bottom: 16%!important;
+    }
+}
+
+@media (max-width:545px) {
+    .MuiSnackbar-anchorOriginBottomCenter {
+        bottom: 13%!important;
+    }
+}

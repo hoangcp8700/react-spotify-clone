@@ -1,0 +1,91 @@
+@import '../../../../color.module.scss';
+.cardTrack {
+    border-radius: .2rem;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient( 149.46deg, #450af5, #8e8ee5 99.16%);
+    .MuiCardContent-root {
+        color: $opacityWhite;
+        display: flex;
+        flex-direction: column;
+        transition: 250ms;
+        &:hover {
+            transform: scale(0.95);
+            .isPlay {
+                display: block;
+            }
+        }
+    }
+    .list {
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        // max-height: 130px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        width: 100%;
+        .row {
+            font-size: 16px;
+            transition: 0.2s;
+            cursor: context-menu;
+            .artist {
+                color: #fff;
+                a {
+                    color: #fff;
+                    font-weight: 700;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .track {
+                color: $opacityWhite;
+            }
+        }
+    }
+    .info {
+        position: relative;
+        margin-top: 1rem;
+        h4 {
+            color: #fff;
+            font-size: 32px;
+            transition: 0.2s;
+            cursor: context-menu;
+        }
+        p {
+            font-size: 16px;
+            transition: 0.2s;
+            cursor: context-menu;
+        }
+    }
+}
+
+@media (max-width:545px) {
+    .cardTrack {
+        .list .row {
+            font-size: 14px;
+        }
+        .info {
+            h4 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .cardTrack {
+        // .list .row {
+        //     font-size: 14px;
+        // }
+        .info {
+            h4 {
+                font-size: 20px;
+            }
+        }
+    }
+}

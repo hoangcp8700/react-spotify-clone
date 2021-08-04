@@ -1,0 +1,52 @@
+@import '../../color.module.scss';
+.circle {
+    width: 100%;
+    max-width: 230px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $box-black-opacity;
+    .poster {
+        padding: 0 1rem 1rem;
+        max-height: 200px;
+        width: 100%;
+        img {
+            width: 100%;
+            max-height: 160px;
+            max-width: 160px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    }
+    .info {
+        p {
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 545px) {
+    .circle {
+        max-width: none;
+        .poster {
+            padding: 0 0 1rem;
+            max-height: 200px;
+            width: 100%;
+            img {
+                max-height: 120px;
+                max-width: 120px;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+        }
+        .info {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}

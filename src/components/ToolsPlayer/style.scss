@@ -1,0 +1,22 @@
+@import '../../color.module.scss';
+.tools__player {
+    color: #ffffff8a;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    span {
+        display: flex;
+    }
+    &--icon:not(:nth-child(3)) {
+        margin-right: .5rem;
+    }
+    &--icon {
+        &.active {
+            color: $logo;
+        }
+        &:hover {
+            transition: transform 0.2s ease-in;
+            transform: scale(1.2);
+        }
+    }
+}

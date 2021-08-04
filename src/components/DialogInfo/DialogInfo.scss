@@ -1,0 +1,104 @@
+@import '../../color.module.scss';
+.MuiDialog-container {
+    transform: translateY(-5%);
+    .MuiPaper-root {
+        background: $footerBackground;
+        color: #fff;
+        max-width: 700px;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+        .MuiDialogTitle-root {
+            border-bottom: 1px solid $logo;
+            h6 {
+                font-weight: 700;
+            }
+        }
+        .MuiDialogContent-root {
+            display: flex;
+            .box__poster {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.2s ease-in-out;
+                img {
+                    display: flex;
+                    width: 100%;
+                    max-width: 200px;
+                    max-height: 200px;
+                }
+            }
+            .box__text {
+                margin-left: 1rem;
+                transition: all 0.2s ease-in-out;
+                .Typography__text {
+                    padding: .2rem 0;
+                    p {
+                        font-size: 16px;
+                    }
+                    .text {
+                        color: $opacityWhite;
+                        a {
+                            color: $opacityWhite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .MuiDialog-container {
+        .MuiPaper-root {
+            width: auto;
+        }
+    }
+}
+
+@media (max-width:545px) {
+    .MuiDialog-container {
+        transform: translateY(-7%);
+        .MuiPaper-root {
+            min-width: 300px;
+            .MuiDialogTitle-root {
+                h6 {
+                    font-size: 16px;
+                }
+                button svg {
+                    font-size: 16px;
+                }
+            }
+            .MuiDialogContent-root {
+                flex-direction: column;
+                .box__poster {
+                    img {
+                        max-width: 150px;
+                        height: 150px;
+                    }
+                }
+                .box__text {
+                    margin: .5rem 0 0;
+                    h6 {
+                        font-size: 20px;
+                        text-align: center;
+                        margin-bottom: 0;
+                    }
+                    .Typography__text {
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:375px) {
+    .MuiDialog-container {
+        .MuiPaper-root {
+            padding: 0 .5rem;
+            min-width: 0;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.pt-0 {
+    padding-top: 0!important;
+}
+
+.pt-3 {
+    padding-top: 3rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+@media (max-width:545px) {
+    .pt-3 {
+        padding-top: 2rem;
+    }
+}

@@ -1,0 +1,66 @@
+@import '../../../color.module.scss';
+$background: #ffffff1f;
+.albums {
+    // padding-top: 3rem;
+    // margin-top: 3rem;
+    .album__playlists {
+        padding-bottom: 2rem;
+        margin: 3rem 2rem;
+        overflow: hidden;
+        background-color: $backgroundMain;
+        border-radius: 1rem;
+        .swiper-slide {
+            // background: #0000002b;
+        }
+    }
+    .copyright {
+        margin: 1rem 2rem;
+        span {
+            color: $opacityWhite;
+            font-size: 14px;
+            display: block;
+        }
+    }
+}
+
+.album__active {
+    padding-top: 0;
+}
+
+@media (max-width: 991px) {
+    .albums {
+        // padding: 0rem;
+        .album__playlists {
+            margin: 0 1rem;
+            // padding: 0 1rem;
+        }
+        .copyright {
+            margin: 0 1rem 2rem;
+        }
+    }
+}
+
+@media (max-width:545px) {
+    .albums {
+        .copyright {
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .albums {
+        .album__playlists {
+            padding-top: 1rem;
+            margin: 0 .5rem;
+        }
+        .copyright {
+            margin: 0 .5rem 1rem;
+            span {
+                font-size: 12px;
+            }
+        }
+    }
+}

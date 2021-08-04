@@ -1,0 +1,16 @@
+@import '../../../../color.module.scss';
+.isPlay {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: none;
+    .icon {
+        cursor: grab;
+        font-size: 40px;
+        color: $logo;
+        transition: 250ms;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+}

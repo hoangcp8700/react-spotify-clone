@@ -1,0 +1,163 @@
+@import '../../color.module.scss';
+.tracks {
+    background: $crystalClearColor;
+    border-radius: 32px;
+    padding: 2rem;
+    margin: 0 2rem;
+    box-shadow: $crystalClearShadowReverse;
+    transition: all 0.2s ease-in-out;
+}
+
+.playOrPause {
+    position: relative;
+    svg {
+        position: absolute;
+        transform: translate(-5px, -15px);
+    }
+    input {
+        position: absolute;
+        z-index: -1;
+        background: none;
+        border: none;
+        width: 0;
+    }
+}
+
+.track__table {
+    padding-bottom: 1rem;
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        border-radius: 1rem;
+        background-color: $logo;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #000;
+    }
+    th:nth-child(2),
+    td:nth-child(2) {
+        min-width: 320px;
+        white-space: nowrap;
+    }
+    tbody td,
+    tbody th {
+        border-bottom: none;
+    }
+    .track__info {
+        display: flex;
+        align-items: flex-end;
+        .MuiTableCell-root {
+            color: $opacityWhite;
+        }
+        .track__image {
+            display: flex;
+            align-items: center;
+            .track__info__img {
+                cursor: grab;
+                background-color: $none;
+            }
+        }
+        .track__info__name {
+            margin-left: 1rem;
+            &--artists {
+                display: block;
+                a {
+                    color: $opacityWhite;
+                    font-size: 16px;
+                    transition: all 0.2s ease-in-out;
+                    &:hover {
+                        color: $hoverTrack;
+                    }
+                }
+            }
+            &--track {
+                color: #fff;
+                font-size: 18px;
+                cursor: grab;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        &.track__info__album .track__info__name {
+            margin-left: 0;
+        }
+    }
+    .track__row {
+        transition: all 250ms ease-in-out;
+        &:hover,
+        &.active {
+            background: $main;
+        }
+        &.track__row__albums {
+            &:hover,
+            &.active {
+                background: $colorRowInTable;
+            }
+        }
+    }
+    .track__of__album {
+        cursor: pointer;
+        color: $opacityWhite;
+        text-decoration: none;
+        transition: 0.3s;
+        &:hover {
+            color: $hoverTrack;
+        }
+    }
+    .opacity__white {
+        color: $opacityWhite;
+    }
+}
+
+@media (max-width: 991px) {
+    .tracks {
+        margin: 2rem 1rem;
+    }
+}
+
+@media (max-width:545px) {
+    .tracks {
+        padding: .8rem 1rem;
+    }
+    .track__table {
+        td,
+        th {
+            padding: .5rem;
+        }
+        .track__of__album {
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .opacity__white {
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .track__info {
+            align-items: center;
+            .track__image .track__info__img {
+                width: 40px;
+            }
+            .track__info__name {
+                &--track {
+                    font-size: 14px;
+                }
+                &--artists a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .playOrPause {
+        svg {
+            font-size: 1.2rem;
+            transform: translate(-5px, -12px);
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .tracks {
+        margin: 1rem .5rem;
+    }
+}

@@ -1,0 +1,208 @@
+@import '../../../../color.module.scss';
+.topic__list__all {
+    .topic__title {
+        padding-top: 1rem;
+        h4 {
+            color: $opacityWhite;
+            font-size: 16px;
+            font-weight: 100;
+            text-align: center;
+        }
+    }
+    .topic__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem 2rem;
+        .card {
+            transition: 1s;
+            flex: 1 1 20%;
+            max-width: 20%;
+            padding: 1rem;
+            margin: .5rem;
+            .card__poster {
+                max-width: unset;
+            }
+        }
+    }
+}
+
+@media (min-width: 1700px) {
+    .topic__list__all {
+        .topic__list {
+            .card {
+                flex: 1 1 20%;
+                max-width: 16%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1900px) {
+    .topic__list__all {
+        .topic__list {
+            .card {
+                flex: 1 1 20%;
+                max-width: 14%;
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .topic__list__all {
+        .topic__list {
+            .card {
+                flex: 1 1 25%;
+                max-width: 25%;
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .topic__list__all {
+        .topic__list {
+            .card {
+                flex: 1 1 33.3%;
+                max-width: 33.3%;
+            }
+        }
+    }
+}
+
+// @media (max-width:768px) {
+//     .topic__list__all {
+//         .topic__list {
+//             .card {
+//                 flex: 1 1 50%;
+//                 max-width: 50%;
+//             }
+//         }
+//     }
+// }
+// @media (max-width: 545px) {
+//     .topic__list__all {
+//         .topic__title h4 {
+//             font-size: 14px;
+//         }
+//         .topic__list {
+//             padding: 1rem 0;
+//             .card {
+//                 flex: 1 1 28.3%;
+//                 max-width: 28.3%;
+//             }
+//         }
+//     }
+// }
+@media (min-width: 200px) {
+    .topic__list__all {
+        .topic__list {
+            margin: 0;
+            padding: 1rem 0;
+            .card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 374px) and (max-width:545px) {
+    .topic__list__all {
+        .topic__title h4 {
+            font-size: 14px;
+        }
+        .topic__list {
+            margin: 5px;
+            .card {
+                flex: 1 1 44%;
+                max-width: 44%;
+            }
+        }
+    }
+}
+
+@media (min-width: 530px) and (max-width:545px) {
+    .topic__list__all {
+        .topic__list {
+            margin: 5px;
+            .card {
+                flex: 1 1 28.3%;
+                max-width: 28.3%;
+            }
+        }
+    }
+}
+
+@media (min-width: 545px) {
+    .topic__list__all {
+        .topic__list {
+            // margin: 5px;
+            .card {
+                flex: 1 1 100%;
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: 767px) {
+    .topic__list__all {
+        .topic__list {
+            margin: 5px;
+            .card {
+                flex: 1 1 44%;
+                max-width: 44%;
+            }
+        }
+    }
+}
+
+@media (min-width: 990px) {
+    .topic__list__all {
+        .topic__list {
+            margin: 5px;
+            .card {
+                flex: 1 1 28.3%;
+                max-width: 28.3%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .topic__list__all {
+        .topic__list {
+            margin: 5px;
+            .card {
+                flex: 1 1 20%;
+                max-width: 20%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1500px) {
+    .topic__list__all {
+        .topic__list {
+            margin: 5px;
+            .card {
+                flex: 1 1 18%;
+                max-width: 18%;
+            }
+        }
+    }
+}
+
+@media (min-width: 1700px) {
+    .topic__list__all {
+        .topic__list {
+            margin: 5px;
+            .card {
+                flex: 1 1 15%;
+                max-width: 15%;
+            }
+        }
+    }
+}

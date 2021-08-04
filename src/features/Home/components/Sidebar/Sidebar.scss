@@ -1,0 +1,193 @@
+@import '../../../../color.module.scss';
+.sidebar__split {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.sidebar {
+    z-index: 999;
+    background-color: #000;
+    color: $sidebarColor;
+    width: 100%;
+    max-width: 230px;
+    height: calc(100vh - 120px);
+    transition: all 0.2s ease-in;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    &.hide {
+        width: 80px;
+    }
+    .sidebar__split__ver {
+        width: 2px;
+        height: 100%;
+        background-color: #000;
+        z-index: 99999;
+        position: absolute;
+        right: 0;
+        cursor: e-resize;
+        div {
+            width: 0px;
+            height: 100%;
+            position: absolute;
+            background: #ffffff17;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 250ms;
+            svg {
+                color: #fff;
+            }
+        }
+        &:hover div {
+            width: 50px;
+        }
+    }
+    .sidebar-top {
+        margin-bottom: .5rem;
+        position: relative;
+        padding: 0 .7rem;
+        .sidebar-option {
+            font-size: 16px;
+            margin: 0;
+            padding: .5rem;
+            &--icon {
+                font-size: 22px;
+                margin: 0 .5rem 0 0;
+            }
+        }
+        .sidebar__logo {
+            text-align: center;
+            padding: 1rem;
+            img {
+                width: 100%;
+            }
+            &.active {
+                overflow: hidden;
+                padding: 1rem .2rem;
+                img {
+                    min-width: 180px;
+                }
+            }
+        }
+    }
+    .sidebar-content {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        padding: 0 .7rem;
+        &::-webkit-scrollbar {
+            width: 5px;
+            border-radius: 1rem;
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $logo;
+            transition: 5s;
+            &:active {
+                background-color: $main;
+            }
+        }
+    }
+    .sidebar-option {
+        color: $sidebarColor;
+        margin: .7rem 0;
+        position: relative;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        transition: 250ms all;
+        &:not(:last-child) {
+            margin-bottom: .5rem;
+        }
+        &.parent {
+            &:hover {
+                background: #5553538c;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                background-color: $logo;
+                width: 0;
+                height: 100%;
+                left: 0;
+                top: 0;
+                transition: 0.5s;
+            }
+            &:hover:after {
+                width: 4px;
+            }
+        }
+        h4 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &.active {
+            background: #5553538c;
+            color: #fff;
+            &:after {
+                content: "";
+                position: absolute;
+                background-color: $logo;
+                width: 4px;
+                height: 100%;
+                left: 0;
+                top: 0;
+                transition: 0.3s;
+            }
+        }
+        p {
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &--icon {
+            margin: 0 .7rem;
+        }
+        &:hover {
+            color: #fff;
+        }
+    }
+    .sidebar-title {
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: context-menu;
+        margin: 0 .7rem;
+        border-bottom: 3px solid $logo;
+        display: flex;
+    }
+}
+
+@media (max-width: 545px) {
+    .sidebar {
+        width: 200px;
+        height: calc(100vh - 100px);
+        display: none;
+        .sidebar__split__ver {
+            display: none;
+        }
+        .sidebar-top {
+            margin-bottom: .5rem;
+            .sidebar__logo {
+                padding: .5rem;
+            }
+            .sidebar-option {
+                font-size: 14px;
+                padding: .5rem;
+            }
+        }
+        .sidebar-title {
+            font-size: 18px;
+        }
+        .sidebar-content {
+            padding: 0 1rem;
+        }
+    }
+}

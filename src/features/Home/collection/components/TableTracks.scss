@@ -1,0 +1,146 @@
+@import '../../../../color.module.scss';
+.table__tracks {
+    padding-bottom: .2rem;
+    .menu-trigger {
+        display: contents;
+    }
+    td,
+    th {
+        border-bottom: none;
+        cursor: grab;
+    }
+    &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+        border-radius: 1rem;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $logo;
+    }
+    .table__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem 0;
+        h4 {
+            font-size: 18px;
+            color: #fff;
+        }
+        button {
+            font-size: 14px;
+            color: $opacityWhite;
+            cursor: pointer;
+            background: none;
+            border: none;
+            outline: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .paginate {
+        display: flex;
+        justify-content: center;
+        margin: .5rem 0;
+        &--icon {
+            color: $opacityWhite;
+            cursor: pointer;
+            transition: 250ms;
+            &:hover {
+                color: #fff;
+                transform: scale(1.2);
+            }
+        }
+    }
+    .row__track {
+        // transition: all 250ms ease-in-out;
+        th {
+            max-width: 40px;
+        }
+        &.active {
+            background: $colorRowInTable;
+        }
+        &:hover {
+            background: $colorRowInTable;
+        }
+        .track__name {
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+            .poster {
+                display: flex;
+            }
+            .info {
+                min-width: 200px;
+                margin-left: .5rem;
+                p {
+                    color: #fff;
+                }
+            }
+        }
+        .track__album {
+            min-width: 150px;
+            a {
+                pointer-events: none;
+            }
+        }
+        .track__ind {
+            position: relative;
+            .compare {
+                cursor: grab;
+                position: absolute;
+                transform: translate(-10px, -15px);
+                color: #fff;
+            }
+        }
+        .track__same {
+            color: $opacityWhite;
+            cursor: context-menu;
+            a {
+                color: $opacityWhite;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:545px) {
+    .table__tracks {
+        th,
+        td {
+            font-size: 12px;
+            padding: .5rem;
+        }
+        .table__title {
+            h4 {
+                font-size: 16px;
+            }
+            button {
+                font-size: 12px;
+            }
+        }
+        .row__track {
+            .track__ind .compare {
+                transform: translate(-5px, -15px);
+                svg {
+                    font-size: 1.2rem;
+                }
+            }
+            .track__name {
+                .info {
+                    min-width: 100px;
+                }
+                .poster {
+                    img {
+                        width: 48px;
+                    }
+                }
+            }
+        }
+    }
+}

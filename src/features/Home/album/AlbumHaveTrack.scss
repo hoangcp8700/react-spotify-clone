@@ -1,0 +1,251 @@
+@import '../../../color.module.scss';
+.album__have__track {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: 1s;
+    z-index: 9999;
+    cursor: pointer;
+    display: flex;
+    .close {
+        position: absolute;
+        right: 20px;
+        z-index: 9;
+        top: 20px;
+        background-color: #ffffff3d;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        border-radius: .5rem;
+        transition: all 0.2s ease-in-out;
+        display: flex;
+        padding: .2rem;
+        &:hover {
+            background-color: #0000006e;
+        }
+        &--icon {
+            color: #fff;
+            font-size: 48px;
+        }
+    }
+    .circle {
+        z-index: 1;
+        width: 100%;
+        border-radius: 50%;
+        height: 100%;
+        background-color: #000;
+        position: absolute;
+        transform: rotate( 180deg);
+        opacity: 0.5;
+        top: -50%;
+        cursor: context-menu;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        cursor: context-menu;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 120%);
+        .card__player {
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            // background-color: #ffffff82;
+            max-width: 700px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 1s;
+            cursor: context-menu;
+            .card__poster {
+                width: 100%;
+                max-width: 350px;
+                border-radius: 50%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                transition: 1s;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    background-color: #000;
+                    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                    animation: spin 15s linear infinite;
+                    animation-play-state: paused;
+                    transition: 1s;
+                    &.active {
+                        transition: 1s;
+                        animation-play-state: running;
+                        box-shadow: rgb(85, 91, 255) 0px 7px 20px 2px, rgb(31, 193, 27) 12px -1px 9px 3px, rgb(255, 217, 19) 0px 9px 16px 11px, rgb(255, 156, 85) -7px 0px 10px 12px, rgb(255, 85, 85) 0px 1px 9px 11px;
+                    }
+                    &.reset {
+                        animation: none;
+                    }
+                }
+                .player {
+                    position: absolute;
+                    width: 100%;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    max-width: 350px;
+                    align-items: center;
+                    height: 100%;
+                    max-height: 350px;
+                    .player__background {
+                        width: 100%;
+                        height: 100%;
+                        background: #000000b0;
+                        opacity: 0;
+                        position: absolute;
+                        border-radius: 50%;
+                        transition: 250ms;
+                    }
+                    span {
+                        z-index: 9;
+                    }
+                    &--icon {
+                        font-size: 60px;
+                        color: #fff;
+                        cursor: grab;
+                        transition: 250ms;
+                        &:hover {
+                            color: $main;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+            .card__info {
+                background: #ffffff1a;
+                box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                border-radius: 1rem;
+                padding: 1rem 2rem;
+                width: 100%;
+                text-align: center;
+                margin-top: 3rem;
+                h1 {
+                    color: #fff;
+                    font-size: 32px;
+                    cursor: context-menu;
+                    a {
+                        display: block;
+                        color: $opacityWhite;
+                        transition: all 0.2s ease-in-out;
+                        span {
+                            font-size: 16px;
+                        }
+                        &:hover {
+                            color: #fff;
+                        }
+                    }
+                }
+                span,
+                span a {
+                    color: $opacityWhite;
+                    transition: all 0.2s ease-in-out;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@media (max-width:1350px) {
+    .album__have__track .container .card__player {
+        max-width: 500px;
+        .card__poster {
+            max-width: 300px;
+            .player {
+                &--icon {
+                    font-size: 48px;
+                }
+            }
+        }
+        .card__info {
+            margin-top: 2rem;
+            h1 {
+                font-size: 24px;
+            }
+            span a {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width:1350px) {
+    .album__have__track {
+        .close {
+            &--icon {
+                font-size: 48px;
+            }
+        }
+        .container .card__player {
+            .card__poster {
+                max-width: 250px;
+                .player {
+                    &--icon {
+                        font-size: 48px;
+                    }
+                }
+            }
+            .card__info {
+                margin-top: 2rem;
+                h1 {
+                    font-size: 20px;
+                }
+                span a {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 545px) {
+    .album__have__track {
+        .container {
+            .card__player {
+                .card__poster {
+                    max-width: 200px;
+                    .player--icon {
+                        font-size: 40px;
+                    }
+                }
+            }
+            .card__info {
+                h1 {
+                    font-size: 18px;
+                }
+                span a {
+                    font-size: 14px;
+                }
+            }
+        }
+        .close {
+            &--icon {
+                font-size: 32px;
+            }
+        }
+    }
+}

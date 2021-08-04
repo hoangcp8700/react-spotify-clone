@@ -1,0 +1,57 @@
+@import '../../color.module.scss';
+.ellipsis {
+    overflow: hidden;
+    width: 100%;
+    margin: .5rem 0 0;
+    &.ellipsis_fade {
+        position: relative;
+        height: 2.4em;
+        /* exactly three lines */
+        &:after {
+            content: "";
+            text-align: right;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 30%;
+            height: 1.2em;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), #191919 50%);
+        }
+        &.one {
+            height: 1.2em;
+        }
+        &.ellipsis__songinfo {
+            margin: 0;
+            &:after {
+                height: 2.4em;
+            }
+        }
+    }
+    p {
+        color: $opacityWhite;
+        font-size: 14px;
+        margin: 0;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 545px) {
+    .ellipsis {
+        &.ellipsis_fade {
+            height: 2em;
+            margin: .2rem 0 0;
+            &:after {
+                height: 1em;
+            }
+            &.one {
+                height: 1em;
+            }
+            &.ellipsis__songinfo:after {
+                height: 2.4em;
+            }
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+}
