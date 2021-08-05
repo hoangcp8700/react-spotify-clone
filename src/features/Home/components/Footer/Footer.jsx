@@ -323,9 +323,7 @@ const Footer = ({handleFooterVertical}) => {
                     )}
                 </div>
                 <div className="footer__right">
-                    <span 
-                        onClick={() => setIsVolume(!isVolume)} 
-                        >
+                    <span onClick={() => setIsVolume(!isVolume)}>
                         {isVolume 
                             ? <VolumeOffIcon className="footer__icon--icon" onClick={() => handleSetVolumeClick(50)} />
                             : <VolumeUpIcon className="footer__icon--icon" onClick={() => handleSetVolumeClick(0)} />
@@ -339,9 +337,9 @@ const Footer = ({handleFooterVertical}) => {
                             ref={volumeRef}
                             type="range" 
                             onChange={handleSetVolume} />
-                        <output className="bubble" ref={bubbleVolumeRef}>
+                        <label className="bubble" ref={bubbleVolumeRef}>
                             {volumeRef?.current?.value}
-                        </output>
+                        </label>
                     </div>
                 </div>
             </div>

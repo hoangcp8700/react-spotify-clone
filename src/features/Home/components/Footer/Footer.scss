@@ -130,13 +130,13 @@
     }
     .footer__right {
         flex: 0.3;
-        height: 80px;
+        // height: 80px;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         color: #fff;
         max-width: 300px;
-        padding: 1rem .5rem;
+        padding: 0 .5rem;
         .footer__icon {
             padding-top: 3px;
             &--icon {
@@ -146,7 +146,8 @@
         }
         .range-wrap {
             position: relative;
-            height: 100%;
+            display: flex;
+            margin-left: .2rem;
             .progressBar {
                 margin: 0
             }
@@ -458,8 +459,8 @@
             flex: 0.2;
             max-width: 120px;
             // min-width: 100px;
-            height: 70px;
-            padding: .8rem .2rem;
+            // height: 70px;
+            // padding: .8rem .2rem;
             .footer__icon {
                 margin: 0 .3rem;
                 padding-top: 5px;
