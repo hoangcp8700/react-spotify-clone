@@ -1,10 +1,12 @@
 # Getting Started with Spotify Clone    
 npm install + npm start
 
-## link: https://dam-spotify.netlify.app
 # USERNAME AND PASSWORD DEMO
-demoproject8700@gmail.comm
-damdamdamdamdam
+##### demoproject8700@gmail.comm
+##### damdamdamdamdam
+
+# Link: 
+##### https://dam-spotify.netlify.app
 
 # TECHNOLOGY
 ##### Language: ReactJS + Redux Toolkit + Redux Saga
