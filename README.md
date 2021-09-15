@@ -7,8 +7,8 @@ demoproject8700@gmail.comm
 damdamdamdamdam
 
 ### TECHNOLOGY
-Language: ReactJS + Redux Toolkit + Redux Saga
-UI: Material UI
+# Language: ReactJS + Redux Toolkit + Redux Saga
+# UI: Material UI
 
 #### HOME PAGE
 ![image](https://user-images.githubusercontent.com/69571824/133356404-bb8a7b72-ee40-459d-bbeb-33ac00f8cf79.png)
