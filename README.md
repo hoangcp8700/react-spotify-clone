@@ -6,8 +6,7 @@ npm install + npm start
 
 TK và MK demo:
 demoproject8700@gmail.comm
-Demo123123@
-### cảm ơn
+damdamdamdamdam
 
 ### Công nghệ
 
