@@ -2,7 +2,7 @@
 npm install + npm start
 
 # USERNAME AND PASSWORD DEMO
-##### demoproject8700@gmail.comm
+##### demoproject8700@gmail.com
 ##### damdamdamdamdam
 
 # Link: 
